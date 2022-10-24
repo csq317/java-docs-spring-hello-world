@@ -13,8 +13,8 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@RequestMapping("/byc")
-	String sayHello() {
-		return "Hello byc!";
-	}
+//	@RequestMapping("/byc")
+//	String sayHello() {
+//		return "Hello byc!";
+//	}
 }
