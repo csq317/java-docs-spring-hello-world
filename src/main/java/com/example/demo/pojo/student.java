@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 @TableName("student")
 public class    student {
-    @TableId
+    @TableId(value="id" , type =IdType.AUTO)
     private Integer id;
     private String name;
     private String sex;
