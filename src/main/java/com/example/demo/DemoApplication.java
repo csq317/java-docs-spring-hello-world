@@ -20,9 +20,8 @@ public class DemoApplication {
    @RequestMapping("/byc")
   public  String sayHello() throws ClassNotFoundException, SQLException {
         String driverName = "com.mysql.cj.jdbc.Driver";
-        String DB_URL = "jdbc:mysql://112.74.162.106:3306";
+        String DB_URL = "jdbc:mysql://47.98.237.169:3306";
         String USER = "root";
-        String PASS = "123456";
 	Class.forName(driverName);
 	Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
 	return conn.toString()+"byc";
