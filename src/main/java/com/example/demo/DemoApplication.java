@@ -22,7 +22,7 @@ public class DemoApplication {
         String driverName = "com.mysql.cj.jdbc.Driver";
         String DB_URL = "jdbc:mysql://112.74.162.106:3306";
         String USER = "root";
-        String PASS = "root";
+        String PASS = "123456";
 	Class.forName(driverName);
 	Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
 	return conn.toString()+"byc";
