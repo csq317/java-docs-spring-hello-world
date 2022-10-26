@@ -22,7 +22,7 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-   @RequestMapping("/selectAll")
+   @RequestMapping("/findAll")
     public String sayHello()   {
         List<student> students = studentMapper.selectList(null);
         return  students.toString();
