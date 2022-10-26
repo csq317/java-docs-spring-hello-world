@@ -32,5 +32,14 @@ public class DemoApplication {
         student stu = studentMapper.getById(id);
         return stu.toString();
     }
+    
+    @RequestMapping("/save")
+    public boolean save(){
+        student stu = new student();
+        Random rd = new Random(10);
+        stu.setName("zhang"+rd.nextInt());
+        stu.setSex("y");
+        return studentMapper.save(stu);
+    }
 }
 
