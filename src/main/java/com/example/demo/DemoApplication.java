@@ -54,8 +54,8 @@ public class DemoApplication {
         Random rd = new Random(10);
         stu.setId(1);
         stu.setName("zhang"+rd.nextInt());
-        stu.setSex("y"+rd.nextInt());
-        return studentMapper.update(stu);
+        stu.setSex("y");
+        return studentMapper.updateById(stu);
     }
 }
 
