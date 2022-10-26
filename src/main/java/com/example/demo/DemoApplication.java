@@ -27,11 +27,12 @@ public class DemoApplication {
         List<student> students = studentMapper.selectList(null);
         return  students.toString();
     }
-//     @RequestMapping("/getById")
-//     public String getById(Integer id){
-//         student stu = studentMapper.getById(id);
-//         return stu.toString();
-//     }
+    
+    @RequestMapping("/getById")
+    public String getById(Integer id){
+        student stu = studentMapper.getById(id);
+        return stu.toString();
+    }
     
 //     @RequestMapping("/save")
 //     public boolean save(){
