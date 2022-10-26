@@ -23,7 +23,7 @@ public class DemoApplication {
     }
 
    @RequestMapping("/findAll")
-    public String sayHello()   {
+    public String findAll()   {
         List<student> students = studentMapper.selectList(null);
         return  students.toString();
     }
@@ -35,7 +35,7 @@ public class DemoApplication {
     }
     
     @RequestMapping("/save")
-    public boolean save(){
+    public int save(){
         student stu = new student();
         Random rd = new Random(10);
         stu.setId((int)((Math.random()*9+1)*10000));
@@ -44,12 +44,12 @@ public class DemoApplication {
         return studentMapper.insert(stu);
     }
     @RequestMapping("/deleteById")
-    public boolean delete(Integer id){
+    public int delete(Integer id){
         return studentMapper.deleteById(id);
     }
 
     @RequestMapping("/updateById")
-    public boolean update(){
+    public int  update(){
         student stu = new student();
         Random rd = new Random(10);
         stu.setId(1);
