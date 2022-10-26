@@ -22,10 +22,15 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @RequestMapping("/byc")
+   @RequestMapping("/selectAll")
     public String sayHello()   {
         List<student> students = studentMapper.selectList(null);
         return  students.toString();
+    }
+    @RequestMapping("/getById")
+    public String getById(Integer id){
+        student stu = studentMapper.getById(id);
+        return stu.toString();
     }
 }
 
