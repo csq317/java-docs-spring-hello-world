@@ -27,19 +27,19 @@ public class DemoApplication {
         List<student> students = studentMapper.selectList(null);
         return  students.toString();
     }
-    @RequestMapping("/getById")
-    public String getById(Integer id){
-        student stu = studentMapper.getById(id);
-        return stu.toString();
-    }
+//     @RequestMapping("/getById")
+//     public String getById(Integer id){
+//         student stu = studentMapper.getById(id);
+//         return stu.toString();
+//     }
     
-    @RequestMapping("/save")
-    public boolean save(){
-        student stu = new student();
-        Random rd = new Random(10);
-        stu.setName("zhang"+rd.nextInt());
-        stu.setSex("y");
-        return studentMapper.save(stu);
-    }
+//     @RequestMapping("/save")
+//     public boolean save(){
+//         student stu = new student();
+//         Random rd = new Random(10);
+//         stu.setName("zhang"+rd.nextInt());
+//         stu.setSex("y");
+//         return studentMapper.save(stu);
+//     }
 }
 
