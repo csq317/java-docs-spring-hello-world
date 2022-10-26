@@ -30,7 +30,7 @@ public class DemoApplication {
     
     @RequestMapping("/getById")
     public String getById(Integer id){
-        student stu = studentMapper.getById(id);
+        student stu = studentMapper.selectById(id);
         return stu.toString();
     }
     
