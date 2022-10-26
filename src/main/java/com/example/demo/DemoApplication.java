@@ -34,13 +34,28 @@ public class DemoApplication {
         return stu.toString();
     }
     
-//     @RequestMapping("/save")
-//     public boolean save(){
-//         student stu = new student();
-//         Random rd = new Random(10);
-//         stu.setName("zhang"+rd.nextInt());
-//         stu.setSex("y");
-//         return studentMapper.save(stu);
-//     }
+    @RequestMapping("/save")
+    public boolean save(){
+        student stu = new student();
+        Random rd = new Random(10);
+        stu.setId((int)((Math.random()*9+1)*10000));
+        stu.setName("zhang"+rd.nextInt());
+        stu.setSex("y");
+        return studentMapper.insert(stu);
+    }
+    @RequestMapping("/deleteById")
+    public boolean delete(Integer id){
+        return studentMapper.deleteById(id);
+    }
+
+    @RequestMapping("/updateById")
+    public boolean update(){
+        student stu = new student();
+        Random rd = new Random(10);
+        stu.setId(1);
+        stu.setName("zhang"+rd.nextInt());
+        stu.setSex("y"+rd.nextInt());
+        return studentMapper.update(stu);
+    }
 }
 
