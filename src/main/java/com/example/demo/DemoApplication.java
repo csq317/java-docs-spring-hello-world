@@ -53,7 +53,7 @@ public class DemoApplication {
         student stu = new student();
         Random rd = new Random(10);
         stu.setId(1);
-        stu.setName("zhang"+(int)((Math.random()*9+1));
+        stu.setName("zhang"+(int)((Math.random()*9+1)));
         stu.setSex("y");
         return studentMapper.updateById(stu);
     }
