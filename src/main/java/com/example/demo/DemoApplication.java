@@ -72,10 +72,12 @@ public class DemoApplication {
             public void run() {
 //                 studentMapper.selectList(null);
 //                 System.out.println("Hello, stranger");
+                
                 student stu = new student();
                 stu.setId((int)((Math.random()*9+1)*10000));
                 stu.setName("llll"+(int)((Math.random()*9+1)));
                 stu.setSex("y");
+                studentMapper.insert(stu);
             }
         };
         ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
