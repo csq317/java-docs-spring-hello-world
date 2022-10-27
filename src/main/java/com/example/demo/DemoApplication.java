@@ -79,6 +79,8 @@ public class DemoApplication {
         // 10：秒   5：秒
         // 第一次执行的时间为10秒，然后每隔五秒执行一次
         service.scheduleAtFixedRate(runnable, 3, 2, TimeUnit.SECONDS);
+        
+        return "Success!";
     }
 }
 
