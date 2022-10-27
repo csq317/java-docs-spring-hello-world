@@ -57,5 +57,9 @@ public class DemoApplication {
         stu.setSex("y");
         return studentMapper.updateById(stu);
     }
+    @RequestMapping("/getCount")
+    public Long getCount(){
+        return studentMapper.selectCount(null);
+    }
 }
 
