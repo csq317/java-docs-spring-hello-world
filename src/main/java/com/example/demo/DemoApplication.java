@@ -61,5 +61,21 @@ public class DemoApplication {
     public Long getCount(){
         return studentMapper.selectCount(null);
     }
+
+    @RequsetMapping("/task1")
+    public void task1(){
+        Runnable runnable = new Runnable() {
+            //创建 run 方法
+            public void run() {
+                studentMapper.selectList(null);
+                System.out.println("Hello, stranger");
+            }
+        };
+        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+        // 第二个参数为首次执行的延时时间，第三个参数为定时执行的间隔时间
+        // 10：秒   5：秒
+        // 第一次执行的时间为10秒，然后每隔五秒执行一次
+        service.scheduleAtFixedRate(runnable, 3, 2, TimeUnit.SECONDS);
+    }
 }
 
