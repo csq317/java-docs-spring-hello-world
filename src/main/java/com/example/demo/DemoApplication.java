@@ -66,7 +66,7 @@ public class DemoApplication {
     }
 
     @RequestMapping("/task1")
-    public void task1(){
+    public String task1(){
         Runnable runnable = new Runnable() {
             //创建 run 方法
             public void run() {
