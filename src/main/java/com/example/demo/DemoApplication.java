@@ -62,7 +62,7 @@ public class DemoApplication {
         return studentMapper.selectCount(null);
     }
 
-    @RequsetMapping("/task1")
+    @RequestMapping("/task1")
     public void task1(){
         Runnable runnable = new Runnable() {
             //创建 run 方法
