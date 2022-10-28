@@ -1,0 +1,3 @@
+{
+  "connectionString": "InstrumentationKey=7ccd8390-6381-426f-bf6f-5641da93c906;IngestionEndpoint=https://eastasia-0.in.applicationinsights.azure.com/;LiveEndpoint=https://eastasia.livediagnostics.monitor.azure.com/"
+}
