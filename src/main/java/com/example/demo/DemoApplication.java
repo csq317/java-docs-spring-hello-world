@@ -13,7 +13,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 import java.util.List;
-
+import com.microsoft.applicationinsights.attach.ApplicationInsights;
 @SpringBootApplication
 @RestController
 @MapperScan("com.example.demo.mapper")
@@ -22,6 +22,7 @@ public class DemoApplication {
     @Resource   
     private  studentMapper studentMapper;
     public static void main(String[] args) {
+        ApplicationInsights.attach();
         SpringApplication.run(DemoApplication.class, args);
     }
 
