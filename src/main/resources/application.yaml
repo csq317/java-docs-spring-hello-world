@@ -1,6 +1,6 @@
 spring:
     datasource:
-        url: petclinicdb.mysql.database.azure.com:3306/mydb
+        url: jdbc:mysql://petclinicdb.mysql.database.azure.com:3306/mydb?useSSL=true
         username: myroot
         password: Sq123456
         driver-class-name: com.mysql.cj.jdbc.Driver
